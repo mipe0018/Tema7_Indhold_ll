@@ -1,17 +1,30 @@
 ---
+//Import style-sheets
+import PageLayout from "../layouts/PageLayout.astro"
+//Import components
+import Card from "../components/Card.astro"
+import Bigcard from "../components/Bigcard.astro"
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
+<PageLayout>
+		<section>
+			<h2>Young Creatives Denmark er et kreativt fællesskab for unge </h2>
+		<p>Inden for film, foto, design, kunst og storytelling skaber vi plads til samarbejde, læring og synlighed gennem workshops, events og kreative projekter.</p>
+</section>
+<!--Card section -->
+<section>
+<div class="grid_3_column">
+		<Card img="/imgs/Group-1.webp" headline="Card Overskrift 1" text="porro, omnis mollitia ea saepe repellat." />
+		<Card img="/imgs/Group-2.webp" headline="Card Overskrift 2" text="ipsum dolor sit amet consectetur adipisicing ." />
+		<Card img="/imgs/Group-3.webp" headline="Card Overskrift 3" text="esciunt porro, omnis mollitia ea saepe repellat. Hic," />
+		</div></section>
+		<!--Bigcard section -->
+		<section>
+			<div class="grid_2_column">
+<Bigcard img="/imgs/ansigt-til-ansigt.webp" headline="Card Overskriorro, omnis mollitia ea saepe repellat. Hic,ft 3" text="esciunt poorro, omnis mollitia ea saepe repellat. Hic,rro, omnis mollitia ea saepe repellat. Hic," direction="left"/>
+<Bigcard img="/imgs/det-første-penselstrøg.webp" headline="Card Overskorro, omnis mollitia ea saepe repellat." text="esciunt porro, omnis mollitia ea sorro, omnis mollitia ea saepe repellat. Hic,aepe repellat. Hic," direction="right"/></div>
+		</section>
+		</PageLayout>
 	</body>
 </html>

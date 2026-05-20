@@ -1,0 +1,33 @@
+@font-face {
+    font-family: montserrat;
+    src: url(/public/fonte/Montserrat/static/Montserrat-Regular.ttf);
+}
+
+:root
+
+/*Font*/
+
+:root {
+  /* colors */
+  --prime-green: rgb(130, 191, 101);
+
+  /* font sizes */
+
+
+  /* fonts */
+  --h1-font: "montserrat-regular";
+  --h2-font: "montserrat-bold";
+  --h3-font: "montserrat";
+  --h4-font: "montserrat";
+  --p-font: "montserrat";
+
+/* font-sizes*/
+
+--p-size: 20px;
+
+
+
+
+
+
+}

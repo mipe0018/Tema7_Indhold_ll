@@ -1,0 +1,62 @@
+---
+//import styles
+import "../styles/general.css"
+import "../styles/custom.css"
+---
+
+<header>
+    <div><img class="logo" src="/imgs/logo-1.webp" alt=""><button>
+			<p>OM OS</p>
+		</button></div>
+    
+<img src="/public/imgs/logo-2.webp" alt="">
+<p class="hero-text">"Det første penselstræg"<br>- I samarbejde med Ansigt til Ansigt.</p>
+</header>
+<style>
+    header {
+        position: relative;
+        font-family: Montserrat;
+        height: 790px;
+        background-image: url(../imgs/hero.webp);
+        background-position: center;
+    }
+
+    div {
+        display: flex;
+       justify-content: space-between;
+        padding: 1rem;
+       
+    }
+
+    .logo {
+        width: 100px;
+    } 
+
+button {
+    margin: 2rem 1rem;
+       width: 189px;
+    height: 42px;
+    border-radius: 999px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+ img {
+    padding: 1rem;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+        color: #fff;
+        font-family: var(--p-font);
+    }
+
+
+@media screen and (width >= 768px) {
+
+}
+</style>
