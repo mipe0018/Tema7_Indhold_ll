@@ -5,14 +5,27 @@ import "../styles/custom.css";
 
 <footer><div><img src="/imgs/Logo-3.png" alt="">
 <p>Dette projekt er udarbejdet som en skoleopgave af en studerende fra @Erhvervsakademi København. <br> Projektet er udviklet med fokus på kreativ formidling, visuel identitet og unges kreative fællesskaber.</p>
-</div><h3>Telefon</h3>
-<p>+45 60 91 43 26</p><h3>Sociale</h3>
+</div>
+<div class="flex-box">
+    <div class="contact">
+<h3>Telefon</h3>
+<h4>+45 60 91 43 26</h4>
+</div>
+
+<div class="social">
+    <h3>Sociale</h3>
 <a href="/">Facebook</a> 
 <a href="/">Instagram</a>
+</div>
+</div>
+
+<div class="contact">
 <h3>Adresse</h3>
 <p>
 Jacob Cameron Brook, <br> Landskronagade 27, st., <br>
-2100 København Ø</p></footer>
+2100 København Ø</p>
+</div>
+</footer>
 
 <style>
 
@@ -23,15 +36,37 @@ Jacob Cameron Brook, <br> Landskronagade 27, st., <br>
     }
 
     img {
-        padding: 4rem 2rem 2rem 2rem;
+        
+        padding: 4rem 4rem 2rem 4rem;
         width: 100%;
     }
- .info {
+
+
+
+ .flex-box {
     display: flex;
-    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+        padding: 1rem;
  }
 
+ .contact {
+   display: block;
+ }
+
+  .social {
+   flex-direction: column;
+ }
+
+   .social a {
+   display: block;
+ }
+
+
  a {
+    padding: 0 0 0 1rem;
+    font-family: var(--p-font);
+    font-size: 12px;
     text-decoration: none;
     color: #fff;
  }
@@ -39,9 +74,16 @@ Jacob Cameron Brook, <br> Landskronagade 27, st., <br>
         padding: 1rem;
         color: #fff;
     }
+
+    h4 {
+        color: #fff;
+    }
+    
     p {
         padding: 1rem;
+        font-family: var(--p-font);
+        font-size: 12px;
         color: #fff;
-        line-height: 2.4;
+        line-height: 2;
     }
 </style>

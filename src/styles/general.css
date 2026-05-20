@@ -29,7 +29,14 @@ h1, h3, h4, p {
 }
 
 h2 {
+    line-height: 2;
     font-family: var(--h2-font);
+}
+
+p {
+   
+   line-height: 2;
+    font-family: var(--p-font);
 }
 
 

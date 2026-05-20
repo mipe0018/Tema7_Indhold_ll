@@ -6,11 +6,11 @@ import "../styles/custom.css"
 
 <header>
     <div><img class="logo" src="/imgs/logo-1.webp" alt=""><button>
-			<p>OM OS</p>
+			<h2>OM OS</h2>
 		</button></div>
     
-<img src="/public/imgs/logo-2.webp" alt="">
-<p class="hero-text">"Det første penselstræg"<br>- I samarbejde med Ansigt til Ansigt.</p>
+<img src="/imgs/logo-2.webp" alt="">
+<p class="hero-text">"Det første penselstrøg"<br>- I samarbejde med Ansigt til Ansigt.</p>
 </header>
 <style>
     header {
@@ -24,24 +24,33 @@ import "../styles/custom.css"
     div {
         display: flex;
        justify-content: space-between;
-        padding: 1rem;
        
     }
 
     .logo {
         width: 100px;
+        height: 100px;
     } 
 
 button {
-    margin: 2rem 1rem;
-       width: 189px;
-    height: 42px;
+    margin: 2rem 0 1rem 0;
+       width: 162px;
+    height: 36px;
     border-radius: 999px;
     background-color: #000;
     color: #fff;
     border: none;
+    font-family: var(--h2-font);
+    font-size: 8px;
 }
 
+button:hover {
+ 
+    background-color: #343A3F;
+    color: #FF93C8;
+ transform: translate(-3px);
+ box-shadow: 0 10px 25px rpga(0, 0, 0, 2);
+}
  img {
     padding: 1rem;
 }
@@ -55,8 +64,19 @@ button {
         font-family: var(--p-font);
     }
 
+   
 
 @media screen and (width >= 768px) {
-
+button {
+    margin: 2rem 0 1rem 0;
+       width: 189px;
+    height: 42px;
+    border-radius: 999px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-family: var(--h2-font);
+    line-height: 18px;
+}
 }
 </style>

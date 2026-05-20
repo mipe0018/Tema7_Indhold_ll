@@ -1,7 +1,13 @@
 @font-face {
     font-family: montserrat;
-    src: url(/public/fonte/Montserrat/static/Montserrat-Regular.ttf);
+    src: url(/fonte/Montserrat/static/Montserrat-Regular.ttf);
 }
+
+@font-face {
+    font-family: montserrat-bold;
+    src: url(/fonte/Montserrat/static/Montserrat-ExtraBold.ttf);
+}
+
 
 :root
 
@@ -22,7 +28,7 @@
   --p-font: "montserrat";
 
 /* font-sizes*/
-
+--h2-size: 16px;
 --p-size: 20px;
 
 
