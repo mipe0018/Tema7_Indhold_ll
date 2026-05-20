@@ -24,17 +24,19 @@ img {
 
 /*tekst*/
 
-h1, h3, h4, p {
-    font-family: var(--h1-font);
+h2 {
+    padding: 1rem;
+    line-height: 2;
+    font-family: montserrat-bold;
 }
 
-h2 {
+h4 {
+    padding: 1rem;
     line-height: 2;
-    font-family: var(--h2-font);
+    font-family: montserrat;
 }
 
 p {
-   
    line-height: 2;
     font-family: var(--p-font);
 }
@@ -49,6 +51,7 @@ header {
     background-size: cover;
     color: #ffffff;
 }
+
 
 .grid_3_column, .grid_2_column {
     display: grid;

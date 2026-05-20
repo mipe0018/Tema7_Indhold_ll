@@ -5,13 +5,12 @@ import PageLayout from "../layouts/PageLayout.astro"
 import Card from "../components/Card.astro"
 import Bigcard from "../components/Bigcard.astro"
 import VideoSection from "../components/VideoSection.astro"
-import Button from "../components/Button.astro"
 ---
 
 <PageLayout>
 		<section>
 			<h2>Young Creatives Denmark er et kreativt fællesskab for unge </h2>
-		<p>Inden for film, foto, design, kunst og storytelling skaber vi plads til samarbejde, læring og synlighed gennem workshops, events og kreative projekter.</p>
+		<h4>Inden for film, foto, design, kunst og storytelling skaber vi plads til samarbejde, læring og synlighed gennem workshops, events og kreative projekter.</h4>
 </section>
 <!--Card section -->
 <section>
@@ -22,18 +21,18 @@ import Button from "../components/Button.astro"
 		</div></section>
 		<!--Video Section -->
 <VideoSection />
-		<section  class="about-us">
+		<section>
 			<img src="/imgs/logo-2.webp" alt="">
-			<h1>"Om os"</h1>
-			<p>Young Creatives Denmark er et kreativt fællesskab for unge med passion for kunst, design, film, fotografi og visuel storytelling. Vi skaber et inspirerende miljø, hvor unge talenter kan udvikle sig, møde erfarne kreative og dele idéer gennem projekter, events og samarbejder.</p>
+			<h2>"Om os"</h2>
+			<h4>Young Creatives Denmark er et kreativt fællesskab for unge med passion for kunst, design, film, fotografi og visuel storytelling. Vi skaber et inspirerende miljø, hvor unge talenter kan udvikle sig, møde erfarne kreative og dele idéer gennem projekter, events og samarbejder.</h4>
 		</section>
 
 		<!--Bigcard section -->
 		<section>
 			<div class="grid_2_column">
-<Bigcard img="/imgs/ansigt-til-ansigt.webp" headline="“Ansigt til Ansigt”" text="“Ansigt til Ansigt” er et inspirerende møde mellem unge kreative og erfarne kunstnere og designere. Eventet skaber plads til læring, netværk og kreative samtaler, hvor idéer og erfaringer deles ansigt til ansigt." direction="right"/>
+<Bigcard img="/imgs/ansigt-til-ansigt.webp" headline="“Ansigt til Ansigt”" text="“Ansigt til Ansigt” er et inspirerende møde mellem unge kreative og erfarne kunstnere og designere. Eventet skaber plads til læring, netværk og kreative samtaler, hvor idéer og erfaringer deles ansigt til ansigt." direction="left"/>
 
-<Bigcard img="/imgs/det-første-penselstrøg.webp" headline="“Det første penselstrøg”" text="“Det Første Penselstrøg” er en kampagne, der sætter fokus på det uperfekte og ærlige i den kreative proces. Kampagnen hylder fejl, usikkerhed og de første forsøg som en vigtig del af at skabe kunst og udvikle sig kreativt." direction="left"/></div>
+<Bigcard img="/imgs/det-første-penselstrøg.webp" headline="“Det første penselstrøg”" text="“Det Første Penselstrøg” er en kampagne, der sætter fokus på det uperfekte og ærlige i den kreative proces. Kampagnen hylder fejl, usikkerhed og de første forsøg som en vigtig del af at skabe kunst og udvikle sig kreativt." direction="right"/></div>
 		</section>
 		</PageLayout>
 	</body>
