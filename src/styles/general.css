@@ -76,7 +76,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    display: none; /*centrering af pop-up*/
+    /*display: none; /*centrering af pop-up*/
     justify-content: center;
     align-items: center;
    }
