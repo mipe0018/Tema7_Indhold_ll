@@ -46,7 +46,7 @@ import About from "../components/About.astro"
   // ÅBN
   document.addEventListener("click", (e) => {
     if (!(e.target instanceof Element)) return;
-    const btn = e.target.closest("[data-modal-id]");
+    const btn = e.target.closest("[data-modal]");
     if (!btn) return;
 
     const modal = document.getElementById((btn as HTMLElement).dataset.modalId!);
