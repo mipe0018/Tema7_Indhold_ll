@@ -2,92 +2,199 @@
 //import styles
 import "../styles/general.css"
 import "../styles/custom.css"
+const {href="#afsnit", text="Om os"} = Astro.props;
 ---
 
 <header>
-    <div><img class="logo" src="/imgs/logo-1.webp" alt=""><button>
-			<h2>OM OS</h2>
-		</button></div>
+    <div class="logo"><img src="/imgs/logo-1.webp" alt="">
+        <a href={href}, id="popupopen" class="link-button">{text}</a></div>
     
 <img src="/imgs/logo-2.webp" alt="">
 <p class="hero-text">"Det første penselstrøg"<br>- I samarbejde med Ansigt til Ansigt.</p>
 </header>
+<div class="popupbox" id="popupbox">
+    <div class="popupboxcontent">
+        <h2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore suscipit repudiandae ipsum totam eum!</h2>
+        <p> Adipisci, ipsum harum maxime sapiente ratione voluptates quod beatae eveniet quos quam ducimus officia maiores nemo?</p>
+        <button class="popupclose" id="popupclose">Luk</button>
+    </div>
+</div>
 <style>
     header {
         position: relative;
         font-family: Montserrat;
-        height: 790px;
+        height: 650px;
         background-image: url(../imgs/hero.webp);
         background-position: center;
     }
 
-    div {
+    .logo {
         display: flex;
        justify-content: space-between;
        
     }
 
-    .logo {
-        width: 100px;
-        height: 100px;
-    } 
+        .logo img {
+            width: 50px;
+            height: 50px;
+       
+    }
 
-button {
+a.link-button {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: 2rem 0 1rem 0;
+    margin: 0.5rem 0 1rem 0;
        width: 162px;
     height: 36px;
     border-radius: 999px;
     background-color: #000;
     color: #fff;
     border: none;
-    font-family: var(--h2-font);
-    font-size: 8px;
+    font-family: montserrat-bold;
+    font-size: 12px;
     box-shadow: 0 8px 20px rpga(0, 0, 0, 0,25);
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
     will-change: transform, box-shadow, background, color;
+    text-decoration: none;
 }
 
-button:hover {
- 
+a.link-button:hover { 
     background-color: #343A3F;
     color: #fff;
  transform: translate(-4px) scale(1.03);
  box-shadow: 0 10px 25px rpga(0, 0, 0, 2);
 }
- img {
-    padding: 1rem;
-}
+
+ 
+
 
 .hero-text {
+    
+   top: 85%;
+   left: 20px;
     position: absolute;
+    /*text-align: left;
+    justify-content: left;*/
     bottom: 30px;
     right: 30px;
-    text-align: right;
+    font-family: var(--p-font);
         color: #fff;
-font-family: montserrat-bold;
+
     }
 
+   /*Pop-up*/
+   .popupbox {
+    position: fixed; /*position ovenpå*/
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);/*baggrund farve*/
+    top: 0; /* afstand fra skærmen */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none; /*centrering af pop-up*/
+    justify-content: center;
+    align-items: center;
+   }
+
+.popupboxcontent {
+    font-family: montserrat;
    
+    height: fit-content;
+    width: 90%;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.popupboxcontent, h2 {
+    
+    padding: 1.5rem 1rem;
+    font-size: 16px;
+}
+
+.popupboxcontent, p {
+    font-size: 14px;
+    padding: 1.5rem 1rem;
+}
+
+.popupclose {
+       display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   margin: 0.5rem 0 1rem 2rem;
+       width: 162px;
+    height: 36px;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-family: montserrat-bold;
+    font-size: 12px;
+    box-shadow: 0 8px 20px rpga(0, 0, 0, 0,25);
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow, background, color;
+    text-decoration: none; 
+}
+
+.popupclose:hover {
+    background-color: #343A3F;
+    color: #fff;
+ transform: translate(-2px) scale(1.03);
+ 
+ box-shadow: 0 10px 25px rpga(0, 0, 0, 2);
+    text-decoration: none; 
+}
 
 @media screen and (width >= 768px) {
-button {
-    margin: 2rem 0 1rem 0;
+a.link-button {
+    margin: 1.5rem 0 1rem 0;
        width: 189px;
     height: 42px;
-    border-radius: 999px;
+   /* border-radius: 999px;
     background-color: #000;
     color: #fff;
     border: none;
     font-family: var(--h2-font);
-    line-height: 18px;
-    font-size: 12px;
+    line-height: 18px;*/
+    font-size: 16px;
 }
 
 .hero-text {
+       top: 75%;
     font-size: 24px;
+    text-align: right;
+    font-family: montserrat-bold;
+    
     }
+
+            .logo img {
+            width: 100px;
+            height: 100px;
+       
+    }
+
 }
 </style>
+
+<!--JavaScript til pop-up -->
+
+<script>
+const popupbox = document.getElementById("popupbox");
+const openBtn = document.getElementById("popupopen");
+const closeBtn = document.getElementById("popupclose");
+// Åbner pop-up
+
+openBtn?.addEventListener("click", (e) => {
+    e.preventDefault();
+    popupbox.style.display = "flex";
+})
+
+// Lukker pop-up
+
+closeBtn.addEventListener("click", () =>{
+    popupbox.style.display = "none";
+})
+
+</script>
