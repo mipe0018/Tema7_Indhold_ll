@@ -16,21 +16,11 @@ const {href="#afsnit", text="Om os"} = Astro.props;
     <div class="popupboxcontent">
         <h2>Young Creatives Denmark (YCDK)</h2>
         <p> 
-
 YCDK er et kreativt fællesskab og en platform, der samler unge med passion for kunst, design og visuel kultur. Her handler det om at skabe rum for idéer, eksperimenter og nye perspektiver – hvor unge stemmer får lov til at fylde og udvikle sig gennem projekter, events og samarbejder.
-
-
 <h2>YCDK & Ansigt til Ansigt</h2>
-
 <p>“Ansigt til Ansigt” er et levende møde mellem unge kreative og erfarne kunstnere og designere. Her brydes afstande ned, og der skabes et ærligt rum for dialog, læring og inspiration. Det er et sted, hvor man ikke bare ser kunst – men møder menneskene bag den.
-
 </p>
-
-
----
-
 <h2>Samarbejdet med Det Første Penselstrøg</h2>
-
 <p>Samarbejdet med Det Første Penselstrøg bygger bro mellem idé og handling. Her undersøges den første kreative impuls – det øjeblik hvor noget nyt opstår. Gennem workshops, visuelle eksperimenter og fælles processer skabes et rum, hvor unge kan afprøve deres udtryk og forstå processen bag kunstnerisk arbejde fra første streg til færdigt værk.</p>
         <button class="popupclose" id="popupclose">Luk</button>
     </div>
@@ -106,12 +96,13 @@ a.link-button:hover {
     left: 0;
     display: none; /*centrering af pop-up*/
     justify-content: center;
-    align-items: center;
+    overflow-y: auto;
    }
 
 .popupboxcontent {
+    overflow-y: auto;
     font-family: montserrat;
-   
+  margin-top: 20px;
     height: fit-content;
     width: 90%;
     background: #000;
@@ -122,7 +113,7 @@ a.link-button:hover {
 
 .popupboxcontent, h2 {
     
-    padding: 1.5rem 1rem;
+    padding: 0 1rem 0rem 1rem;
     font-size: 16px;
 }
 
@@ -207,7 +198,7 @@ a.link-button {
 
 .popupboxcontent, h2 {
     
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     font-size: 24px;
 }
 
