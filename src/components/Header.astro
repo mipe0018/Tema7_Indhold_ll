@@ -65,12 +65,7 @@ a.link-button:hover {
  transform: translate(-4px) scale(1.03);
  box-shadow: 0 10px 25px rpga(0, 0, 0, 2);
 }
-
- 
-
-
 .hero-text {
-    
    top: 85%;
    left: 20px;
     position: absolute;
@@ -184,17 +179,18 @@ a.link-button {
 const popupbox = document.getElementById("popupbox");
 const openBtn = document.getElementById("popupopen");
 const closeBtn = document.getElementById("popupclose");
-// Åbner pop-up
 
-openBtn?.addEventListener("click", (e) => {
-    e.preventDefault();
-    popupbox.style.display = "flex";
-})
+if (popupbox && openBtn && closeBtn) {
+    // Åbner pop-up
+    openBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        popupbox.style.display = "flex";
+    })
 
-// Lukker pop-up
-
-closeBtn.addEventListener("click", () =>{
-    popupbox.style.display = "none";
-})
+    // Lukker pop-up
+    closeBtn.addEventListener("click", () => {
+        popupbox.style.display = "none";
+    })
+}
 
 </script>

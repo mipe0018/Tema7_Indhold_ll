@@ -1,8 +1,11 @@
 ---
-const {href="#", text="Læs mere"} = Astro.props;
+const {href, variant, modalid, text="Læs mere"} = Astro.props;
 ---
+{ href ? (
+<a href={href} class={`link-button link-button--${variant}`}>{text}</a>
+):(<button class={`link-button link-button--${variant}`} data-model-id={modalid}>{text}</button>)
+}
 
-			<a href={href} class="link-button">{text}</a>
 	
 
     <style>
@@ -14,13 +17,35 @@ const {href="#", text="Læs mere"} = Astro.props;
     border: none;
     font-family: montserrat-bold;
     font-size: 12px;
-    box-shadow: 0 8px 20px rpga(0, 0, 0, 0,25);
-    transition: all 0.4s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
     will-change: transform, box-shadow, background, color;
     text-decoration: none;
 }
 
 a.link-button:hover {
+ 
+    background-color: #343A3F;
+    color: #fff;
+ transform: translate(-4px) scale(1.03);
+ box-shadow: 0 10px 25px rpga(0, 0, 0, 2);
+}
+
+  button {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    font-family: montserrat-bold;
+    font-size: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease;
+    will-change: transform, box-shadow, background, color;
+    text-decoration: none;
+}
+
+button:hover {
  
     background-color: #343A3F;
     color: #fff;
@@ -35,6 +60,12 @@ a.link-button {
      padding: 12px 30px;
      font-size: 14px;
  
+}
+
+button {
+ padding: 12px 30px;
+     font-size: 14px;
+    
 }
 }
     </style>

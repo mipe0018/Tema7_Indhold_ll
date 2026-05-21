@@ -67,6 +67,75 @@ footer {
     height: 250px;
 }
 
+   /*Pop-up*/
+   .modal {
+    position: fixed; /*position ovenpå*/
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);/*baggrund farve*/
+    top: 0; /* afstand fra skærmen */
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none; /*centrering af pop-up*/
+    justify-content: center;
+    align-items: center;
+   }
+
+.hidden {
+    display: none;
+}
+
+
+.modal-box {
+    font-family: montserrat;
+   
+    height: fit-content;
+    width: 90%;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.modal-box, h2 {
+    
+    padding: 1.5rem 1rem;
+    font-size: 16px;
+}
+
+.modal-box, p {
+    font-size: 14px;
+    padding: 1.5rem 1rem;
+}
+/*
+button {
+       display: inline-flex;
+    justify-content: center;
+    align-items: center;
+   margin: 0.5rem 0 1rem 2rem;
+       width: 162px;
+    height: 36px;
+    border-radius: 999px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    font-family: montserrat-bold;
+    font-size: 12px;
+    box-shadow: 0 8px 20px rpga(0, 0, 0, 0,25);
+    transition: all 0.3s ease;
+    will-change: transform, box-shadow, background, color;
+    text-decoration: none; 
+}
+
+button:hover {
+    background-color: #343A3F;
+    color: #fff;
+ transform: translate(-2px) scale(1.03);
+ 
+ box-shadow: 0 10px 25px rpga(0, 0, 0, 2);
+    text-decoration: none; 
+}*/
+
 @media screen and (width >= 768px) {
 .grid_3_column {
     grid-template-columns: repeat(3, 1fr);

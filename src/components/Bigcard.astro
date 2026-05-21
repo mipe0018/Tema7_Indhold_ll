@@ -1,5 +1,5 @@
 ---
-const {img, headline, text, direction} = Astro.props;
+const {img, headline, text, direction, href, variant, modalid} = Astro.props;
 import Button from "../components/Button.astro"
 ---
 
@@ -8,7 +8,7 @@ import Button from "../components/Button.astro"
  <div class="content" id="afsnit-1">
  <h2>{headline}</h2>
  <p>{text}</p>
- <Button />
+ <Button href{href} variant{variant} modalid{modalid} />
  </div>
 </article>
 
