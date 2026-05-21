@@ -5,23 +5,25 @@ import "../styles/custom.css";
 
 ---
 <section>
-<div>
+<div class="text-box">
     <img src="/imgs/logo-4.png" alt="">
     <h1>How-to-Motion-Graphic med
-“Det første penselstrøg”</h1>
+“Det første penselstrøg”</h1></div><div class="video-box">
     <video width="340" height="260" controls>
   <source src="/imgs/how-to-MG.mp4" type="video/mp4">
   <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
+Your browser does not support the video tag.</div>
 </video>
-</div>
+
 </section>
 
 <style>
 section {
      background-color: #00324F;
      min-width: 100%;
-     height: 700px;
+     height:fit-content;
+     padding-top: 4rem;
+     padding-bottom: 4rem;
 }
 
 img {
@@ -35,6 +37,35 @@ h1 {
 }
 
 video {
+    height: 100%;
     width: 100%;
 }
+
+@media screen and (width >= 768px) {
+section {
+     height:fit-content;
+     display: grid;
+     grid-template-columns: 1fr 1fr;
+}
+
+
+.text-box {
+    padding-left: 2rem;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.video-box {
+    grid-column: 1;
+    grid-row: 1;
+}
+img {
+    padding: 1rem;
+width: 80%;
+}
+
+h1 {
+   font-size: 30px;
+}
+
 </style>

@@ -1,21 +1,26 @@
 ---
-const {img, headline, text, direction} = Astro.props;
+const {img, headline, text, direction, href, variant, modalid} = Astro.props;
+import Button from "../components/Button.astro"
 ---
 
 <article class={direction}>
  <img src={img} alt="">
- <div class="content">
- <h3>{headline}</h3>
+ <div class="content" id="afsnit-1">
+ <h2>{headline}</h2>
  <p>{text}</p>
+ <Button href{href} variant{variant} modalid{modalid} />
  </div>
 </article>
 
 <style>
-    h3 {
+    h2 {
 font-size: 18px;
+  line-height: 2;
+    font-family: montserrat-bold;
 }
 
 p {
+    margin-bottom: 1.5rem;
    font-size: 12px; 
 }
 
@@ -25,16 +30,17 @@ img {
 }
 
 article {
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 }
 
 
 
 @media screen and (width >= 768px) {
 img {
-    max-width: 45%;
+    max-width: 100%;
     height: 330px;
 }
 
@@ -56,7 +62,7 @@ article {
     justify-content: space-around;
 }
 
-article.left {
+article.right {
     flex-direction: row-reverse;
 }
 
